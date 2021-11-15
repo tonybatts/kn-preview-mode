@@ -7,9 +7,6 @@ chrome.browserAction.onClicked.addListener((tab) => {
 
       chrome.tabs.create({ url: "STAGING_API", active: false }, (tab) => {
         setTimeout(() => {
-          // chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-          //   chrome.tabs.sendMessage(tabs[0].id, 'ready')
-          // })
           chrome.tabs.remove(tab.id)
         }, 1000);
       })
