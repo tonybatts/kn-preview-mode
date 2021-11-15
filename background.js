@@ -5,7 +5,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
         file: "clearCache.js"
       })
 
-      chrome.tabs.create({ url: "https://web.staging.knfilters.merce.io/api/preview/start?secret=LetMeIn!!", active: false }, (tab) => {
+      chrome.tabs.create({ url: "STAGING_API", active: false }, (tab) => {
         setTimeout(() => {
           // chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
           //   chrome.tabs.sendMessage(tabs[0].id, 'ready')
@@ -14,7 +14,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
         }, 1000);
       })
 
-      chrome.tabs.create({ url: "https://www.knfilters.com/api/preview/start?secret=LetMeIn!!", active: false }, (tab) => {
+      chrome.tabs.create({ url: "PROD_API", active: false }, (tab) => {
         setTimeout(() => {
           chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             chrome.tabs.sendMessage(tabs[0].id, 'ready')
@@ -23,7 +23,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
         }, 1000);
       })
 
-      chrome.tabs.create({ url: "https://stg.knfilters.com/api/preview/start?secret=LetMeIn!!", active: false }, (tab) => {
+      chrome.tabs.create({ url: "UAT_API", active: false }, (tab) => {
         setTimeout(() => {
           chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             chrome.tabs.sendMessage(tabs[0].id, 'ready')
