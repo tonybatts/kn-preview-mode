@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "K&N Preview Mode",
+  "version": "2.4",
+  "description": "Quickly view latest updates",
+  "short_name": "K&N Preview Mode",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "cookies",
+    "https://web.staging.knfilters.merce.io/",
+    "https://www.knfilters.com/",
+    "https://stg.knfilters.com/"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
